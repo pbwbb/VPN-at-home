@@ -18,6 +18,53 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 ![image](https://github.com/user-attachments/assets/9b9fad37-06ab-4ae3-9252-5883cc885c5b)
 ![image](https://github.com/user-attachments/assets/ce89a3eb-0fe7-49df-beaf-bbfde26ac8bd)
 
+* colocando os IPS
+
+![image](https://github.com/user-attachments/assets/2421581f-6405-420f-b8b9-27350bfea039)
+
+* gerando o par de chaves
+
+![image](https://github.com/user-attachments/assets/6b2f9063-8e62-436a-9070-02c4c6d819f4)
+
+
+* Criando o arquivo de configuração da interface
+
+![image](https://github.com/user-attachments/assets/5b104998-c8a8-470f-b4bb-c8ecd43ee944)
+![image](https://github.com/user-attachments/assets/1b40baeb-ea53-4eb0-a306-18b0120fd5f4)
+
+* Instalando Wireguard no cliente
+
+
+
+* Criando o par de chaves do cliente
+
+wg genkey | tee privatekey | wg pubkey > publickey
+
+* arquivo de configuração do cliente
+
+[Interface]
+PrivateKey = <client-private-key>
+Address = 10.66.66.2/24
+DNS = <dns-server>   # Optional, but useful for resolving domain names while using the VPN
+
+[Peer]
+PublicKey = <server-public-key>
+Endpoint = <server-ip>:51820
+AllowedIPs = 0.0.0.0/0  # This routes all traffic through the VPN
+
+* Adicionando o cliente no servidor
+
+[Peer]
+PublicKey = <client-public-key>
+AllowedIPs = 10.66.66.2/32
+
+
+* Habilitando IP forwarding
+
+/etc/sysctl.conf
+![image](https://github.com/user-attachments/assets/c193e43b-7f0d-474f-8582-795b9555ef40)
+
+![image](https://github.com/user-attachments/assets/b6a08249-e65e-42b5-8b5a-8011c8c48ed5)
 
 
 
