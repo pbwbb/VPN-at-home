@@ -42,7 +42,7 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 
 * arquivo de configuração do cliente
 
-![image](https://github.com/user-attachments/assets/8caa3ff8-feb2-4e93-a93b-0ec75984b246)
+![image](https://github.com/user-attachments/assets/cf52d23a-26b5-491a-a744-5924e8ec7777)
 
 
 [Interface]
@@ -55,7 +55,15 @@ PublicKey = <server-public-key>
 Endpoint = <server-ip>:51820
 AllowedIPs = 0.0.0.0/0  # This routes all traffic through the VPN
 
+* Iniciando a interface no cliente
+* 
+
+
+
 * Adicionando o cliente no servidor
+
+![image](https://github.com/user-attachments/assets/8ffdd9c7-9e09-40d1-b9aa-d1781b75c020)
+
 
 [Peer]
 PublicKey = <client-public-key>
