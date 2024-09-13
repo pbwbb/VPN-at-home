@@ -33,14 +33,17 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 ![image](https://github.com/user-attachments/assets/1b40baeb-ea53-4eb0-a306-18b0120fd5f4)
 
 * Instalando Wireguard no cliente
-
-
+** nesse caso estou usando um desktop ubuntu
+![image](https://github.com/user-attachments/assets/1c6b33ff-9ae8-4df1-9e77-f07145f4ec31)
 
 * Criando o par de chaves do cliente
 
-wg genkey | tee privatekey | wg pubkey > publickey
+![image](https://github.com/user-attachments/assets/5a5b87f3-ab58-4c0f-aa44-f5a4976d2afe)
 
 * arquivo de configuração do cliente
+
+![image](https://github.com/user-attachments/assets/8caa3ff8-feb2-4e93-a93b-0ec75984b246)
+
 
 [Interface]
 PrivateKey = <client-private-key>
