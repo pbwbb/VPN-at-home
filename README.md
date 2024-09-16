@@ -99,7 +99,7 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 * Editando o arquivo de configuração
 
 ![image](https://github.com/user-attachments/assets/4c0a99bc-8464-4625-af05-6e0f9f70d4f4)
-![image](https://github.com/user-attachments/assets/81f844ee-5b94-49ad-bf09-d324e7cd68db)
+![image](https://github.com/user-attachments/assets/28d3118b-4c8d-45af-915e-46f0dc7e2c77)
 
 * Reiniciaando o squid
 
