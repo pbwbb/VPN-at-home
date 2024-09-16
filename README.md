@@ -33,41 +33,30 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 ![image](https://github.com/user-attachments/assets/1b40baeb-ea53-4eb0-a306-18b0120fd5f4)
 
 * Instalando Wireguard no cliente
-** nesse caso estou usando um desktop ubuntu
-![image](https://github.com/user-attachments/assets/1c6b33ff-9ae8-4df1-9e77-f07145f4ec31)
+  
+** nesse caso estou usando um laptop windows
 
-* Criando o par de chaves do cliente
-
-![image](https://github.com/user-attachments/assets/5a5b87f3-ab58-4c0f-aa44-f5a4976d2afe)
-
-* arquivo de configuração do cliente
-
-![image](https://github.com/user-attachments/assets/cf52d23a-26b5-491a-a744-5924e8ec7777)
+![image](https://github.com/user-attachments/assets/da15e68e-9138-4762-8e8e-d10d9cc691aa)
 
 
-[Interface]
-PrivateKey = <client-private-key>
-Address = 10.66.66.2/24
-DNS = <dns-server>   # Optional, but useful for resolving domain names while using the VPN
+* arquivo de configuração do cliente (add empty tunnel ou ctrl + N)
 
-[Peer]
-PublicKey = <server-public-key>
-Endpoint = <server-ip>:51820
-AllowedIPs = 0.0.0.0/0  # This routes all traffic through the VPN
 
-* Iniciando a interface no cliente
-* 
+  ![image](https://github.com/user-attachments/assets/36a49897-65b7-4eb1-a3e8-3e0ef4cec26b)
 
+** o wireguard ja vai criar o par de chaves e completar a chave privada, a chave publica fica disponível acima
+
+![image](https://github.com/user-attachments/assets/8b969f98-e1f5-42f2-9dda-45b2c40c1a7d)
+
+* Iniciando o wiregaurd no cliente
+
+![image](https://github.com/user-attachments/assets/8659798b-d606-4aa6-85f4-40152044f281)
+![image](https://github.com/user-attachments/assets/84efa95e-d565-45af-b521-2a4e38c16ad8)
 
 
 * Adicionando o cliente no servidor
 
-![image](https://github.com/user-attachments/assets/8ffdd9c7-9e09-40d1-b9aa-d1781b75c020)
-
-
-[Peer]
-PublicKey = <client-public-key>
-AllowedIPs = 10.66.66.2/32
+![image](https://github.com/user-attachments/assets/3f3a9ec5-1927-4bdf-b31e-975bd942d48e)
 
 
 * Habilitando IP forwarding
@@ -78,8 +67,26 @@ AllowedIPs = 10.66.66.2/32
 ![image](https://github.com/user-attachments/assets/b6a08249-e65e-42b5-8b5a-8011c8c48ed5)
 
 
-
 ### testes de conexão
+
+# Do cliente, é possível pingar o IP interno do servidor, ou seja, estamos na rede interna da VPN.
+
+![image](https://github.com/user-attachments/assets/e8e369be-fb50-4415-9f51-f9e24d74cae0)
+
+
+# Também é possível pingar o DNS do Google (8.8.8.8), o que mostra que temos conexão com a internet.
+
+![image](https://github.com/user-attachments/assets/362d8bff-a8aa-4196-85b7-a7c7a6ecf8ec)
+
+
+# Rodando o tracert para o IP interno do servidor, podemos ver que tivemos apenas um hop, ou seja, o cliente está se conectando diretamente com o servidor do WireGuard, sem rotas intermediárias.
+
+![image](https://github.com/user-attachments/assets/49309645-2deb-4df8-907f-758ccd792c4e)
+
+# rodando um webserver apache podemos acessa-lo pela VPN
+![image](https://github.com/user-attachments/assets/eb6f8ad5-c9be-4fc6-8514-429c3a141f2a)
+![image](https://github.com/user-attachments/assets/5cfcae5e-5c26-4e67-b553-a9dc8aec75a0)
+
 
 ## instalando squid
 
