@@ -88,7 +88,28 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 ![image](https://github.com/user-attachments/assets/5cfcae5e-5c26-4e67-b553-a9dc8aec75a0)
 
 
-## instalando squid
+# instalando squid
 
+![image](https://github.com/user-attachments/assets/c7349374-eec9-4cd0-9dd9-e42f5f2435a7)
+
+* bakcup do arquivo de configuração
+  
+![image](https://github.com/user-attachments/assets/e447be86-3bfb-487d-b6ab-0298c9198a49)
+
+* Editando o arquivo de configuração
+
+![image](https://github.com/user-attachments/assets/4c0a99bc-8464-4625-af05-6e0f9f70d4f4)
+![image](https://github.com/user-attachments/assets/81f844ee-5b94-49ad-bf09-d324e7cd68db)
+
+* Reiniciaando o squid
+
+
+![image](https://github.com/user-attachments/assets/f9239b61-ff26-4205-b307-371fbce4c038)
+
+* Configurandoo o Proxy no Browser
+
+![image](https://github.com/user-attachments/assets/6571cc67-3057-47b9-bb51-3490db03056d)
+
+* 
 ## teste com servidor apache
 
