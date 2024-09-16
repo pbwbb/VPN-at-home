@@ -1,10 +1,10 @@
 # VPN-at-home
 
-Nesse laboratório vou configurar um ambiente de VPN na minha rede local, assim como um proxy para acessar conteudo web. O objetivo é criar uma infraestrutura segura para acessar a minha rede local remotamente. Esse lab vai servir de base para projetos futuros
+Nesse laboratório vou configurar um ambiente de VPN na minha rede local, assim como um proxy para acessar conteudo web por fora da rede interna. O objetivo é criar uma infraestrutura segura para acessar a minha rede local remotamente. Esse lab vai servir de base para projetos futuros
 
 # Configurando o Ambiente
 
-Para esse lab vou usar uma VM rodando ubuntu como servidor de Wireguard e squid
+Para esse lab vou usar uma VM na cloud rodando ubuntu como servidor de Wireguard e squid
 
 ## instalando wireguard
 Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/quickstart/) do site oficial da wireguard.
@@ -48,7 +48,7 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 
 ![image](https://github.com/user-attachments/assets/8b969f98-e1f5-42f2-9dda-45b2c40c1a7d)
 
-* Iniciando o wireguardd no cliente
+* Iniciando o wireguard no cliente
 
 ![image](https://github.com/user-attachments/assets/8659798b-d606-4aa6-85f4-40152044f281)
 ![image](https://github.com/user-attachments/assets/84efa95e-d565-45af-b521-2a4e38c16ad8)
@@ -62,6 +62,7 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 * Habilitando IP forwarding
 
 /etc/sysctl.conf
+
 ![image](https://github.com/user-attachments/assets/c193e43b-7f0d-474f-8582-795b9555ef40)
 
 ![image](https://github.com/user-attachments/assets/b6a08249-e65e-42b5-8b5a-8011c8c48ed5)
@@ -78,6 +79,7 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 * Editando o arquivo de configuração
 
 ![image](https://github.com/user-attachments/assets/4c0a99bc-8464-4625-af05-6e0f9f70d4f4)
+
 ![image](https://github.com/user-attachments/assets/28d3118b-4c8d-45af-915e-46f0dc7e2c77)
 
 * Reiniciaando o squid
@@ -105,7 +107,8 @@ Para a instalação vou seguir o [Quick Start Guide](https://www.wireguard.com/q
 
 ![image](https://github.com/user-attachments/assets/49309645-2deb-4df8-907f-758ccd792c4e)
 
-## rodando um webserver apache podemos acessa-lo pela VPN e também pelo proxy (é possível acessar o proxy por fora da rede interna se o IP for permitido)
+## Rodando um webserver apache podemos acessa-lo pela VPN e também pelo proxy (é possível acessar o proxy por fora da rede interna se o IP for permitido)
 
-![image](https://github.com/user-attachments/assets/eb6f8ad5-c9be-4fc6-8514-429c3a141f2a)
+![image](https://github.com/user-attachments/assets/0e3cc04a-0bb0-44bb-982e-254d871571dc)
+
 ![image](https://github.com/user-attachments/assets/5cfcae5e-5c26-4e67-b553-a9dc8aec75a0)
